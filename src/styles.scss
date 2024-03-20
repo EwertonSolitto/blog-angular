@@ -1,5 +1,21 @@
+$background-color: #121212;
+$font-color: #ECECEC;
+
 * {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Noto Sans Gurmukhi', sans-serif;
+  color: $font-color;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 80rem;
+  background-color: $background-color;
 }

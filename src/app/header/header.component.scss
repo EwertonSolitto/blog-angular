@@ -1,0 +1,21 @@
+header {
+  padding-block: 3rem;
+  padding-inline: 1.5rem;
+
+  a.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    font-weight: 700;
+    border-radius: 100%;
+    background: rgb(132,20,200);
+    background: linear-gradient(52deg, rgba(132,20,200,1) 0%, rgba(210,24,75,1) 30%, rgba(232,105,7,0.9108018207282913) 85%);
+  
+    span {
+      font-size: 1rem;
+      padding-top: 0.125rem;
+    }
+  }
+}
