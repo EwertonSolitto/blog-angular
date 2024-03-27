@@ -46,7 +46,7 @@ body {
   width: 100%;
   max-width: 80rem;
   background-color: var(--background-color);
-  padding-inline: 1.5rem;
+  padding-inline: 3.5rem;
 }
 
 .mat-mdc-menu-content  {
@@ -55,5 +55,20 @@ body {
   span {
     color: var(--primary-color);
     font-size: 1.25rem;
+  }
+}
+
+.bottom-border {
+  padding-block: 2rem;
+  border-bottom: 1px #2a2a2a solid;
+}
+
+@media (max-width: 720px) {
+  #root {
+    padding-inline: 1.5rem;
+  }
+
+  .bottom-border {
+    padding-block: 1.25rem;
   }
 }
