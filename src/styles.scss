@@ -1,25 +1,13 @@
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
 $blog-angular-primary: mat.define-palette(mat.$indigo-palette);
 $blog-angular-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
-// The warn palette is optional (defaults to red).
 $blog-angular-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
 $blog-angular-theme: mat.define-light-theme((
   color: (
     primary: $blog-angular-primary,
@@ -30,19 +18,19 @@ $blog-angular-theme: mat.define-light-theme((
   density: 0
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($blog-angular-theme);
 
-$background-color: #121212;
-$font-color: #ECECEC;
+:root {
+  --background-color: #121212;
+  --font-color: #ECECEC;
+  --secondary-color: #878787;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Noto Sans Gurmukhi', sans-serif;
-  color: $font-color;
+  color: var(--font-color);
   text-decoration: none;
 }
 
@@ -51,11 +39,21 @@ html, body { height: 100%; }
 body {
   display: flex;
   justify-content: center;
+  background-color: var(--font-color);
 }
 
 #root {
   width: 100%;
   max-width: 80rem;
-  background-color: $background-color;
+  background-color: var(--background-color);
   padding-inline: 1.5rem;
+}
+
+.mat-mdc-menu-content  {
+  background-color: var(--font-color);
+
+  span {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+  }
 }
